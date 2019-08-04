@@ -1,0 +1,10 @@
+
+import json
+from pathlib import Path
+movies = [
+    {"id": 1, "title": "Terminator", "year": 1991},
+    {"id": 2, "title": "The Goonies", "year": 1985}
+]
+
+data = json.dumps(movies)
+Path("movies.json").write_text(data)
