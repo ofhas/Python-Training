@@ -19,5 +19,5 @@ Path("movies.json").write_text(data)
 #movies = json.loads(data)
 #print(movies)
 
-## you can also show a spesific filed in the movies by using print(movies[0] ["title"])
+## you can also show a specific field found in the array "movies" by using print(movies[0] ["title"])
 ##for example this will present the first movie title which is located in the movies array.
