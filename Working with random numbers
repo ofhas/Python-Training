@@ -1,0 +1,11 @@
+import random
+import string
+
+print(random.choice([1, 2, 3, 4, 5]))# will randomly choose on of number within the given array
+print(random.choices([1, 2, 3, 4, 5], k=2))# will choose randomly 2 numbers (or more depands on k value) from the given array
+print("".join(random.choices(string.ascii_letters + string.ascii_letters, k=4)))# will create a random 4 letter string upper case & lower 
+
+
+numbers = [1, 2, 3, 4, 5]
+random.shuffle(numbers)# reorganizing and shuffling the numbers within the numbers array
+print(numbers)
