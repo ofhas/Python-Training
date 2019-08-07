@@ -1,0 +1,23 @@
+
+import random
+
+def ordered_list(number, list_bla):
+    for i in list_bla:
+        if i == number: #checking if the value that sent to the funcion is equal to one of the list's elements
+            return True
+    return False
+
+
+list_new = random.choices([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], k=15)# creating a random list
+list_new.sort() # sorting the list from lowest to highest
+print(ordered_list(51, list_new))
+print(ordered_list(1, list_new))
+print(ordered_list(31, list_new))
+print(ordered_list(2, list_new))
+
+#output in those cases will be:
+False
+True
+False
+True
+
