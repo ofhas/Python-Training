@@ -1,0 +1,24 @@
+from tkinter import *
+
+root = Tk()
+
+topFram = Frame(root)
+topFram.pack()
+
+bottomFram = Frame(root)
+bottomFram.pack(side = BOTTOM)
+
+button1 = Button(topFram, text = "Button 1", fg = "red")
+button2 = Button(topFram, text = "Button 2", fg = "blue")
+button3 = Button(bottomFram, text = "Button 3", fg = "silver")
+button4 = Button(bottomFram, text = "Button 4", fg = "gold")
+
+button1.pack(side = LEFT)
+button2.pack(side = RIGHT)
+button3.pack(side = LEFT)
+button4.pack(side = RIGHT)
+#button5.pack(side = RIGHT)
+
+
+#layour orginazing
+root.mainloop() #holding the window open in a infinite loop
