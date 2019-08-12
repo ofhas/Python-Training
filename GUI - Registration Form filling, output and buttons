@@ -1,0 +1,63 @@
+from tkinter import *
+from PIL import Image, ImageTk
+
+root = Tk()
+root.geometry("500x500")
+root.title("Registration Form")
+
+
+fn = StringVar()
+ln = StringVar()
+dob = StringVar()
+cy = StringVar()
+var = StringVar()
+
+def printt():
+    first = fn.get()
+    second = ln.get()
+    third = dob.get()
+    forth = var.get()
+    print(f"Your full name is: {first} {second}")
+    print(f"Your age is: {third}")
+    print(f"Your Country is: {forth}")
+
+def exit1():
+    exit()
+
+entry1 = Entry(root, textvar = fn)
+entry2 = Entry(root, textvar = ln)
+entry3 = Entry(root, textvar = dob)
+entry4 = Entry(root, textvar = cy)
+
+
+label0 = Label(root, text = "Registration Form", relief = "solid", width = 20, font = ("arial", 19, "bold"))
+label0.place(x = 90, y = 150)
+
+label1 = Label(root, text = "FirstName:", width = 20, font = ("bold", 10))
+label1.place(x = 65, y = 240)
+entry1.place(x = 240, y =  242)
+
+label2 = Label(root, text = "LastName:", width = 20, font = ("bold", 10))
+label2.place(x = 65, y = 280)
+entry2.place(x = 240, y =  282)
+
+label3 = Label(root, text = "DOB", width = 20, font = ("bold", 10))
+label3.place(x = 65, y = 320)
+entry3.place(x = 240, y =  322)
+
+label4 = Label(root, text = "Country:", width = 20, font = ("bold", 10))
+label4.place(x = 65, y = 360)
+entry4.place(x = 240, y =  362)
+
+
+
+list_1 = ["Israel", "USA", "Canada", "Singapore"]
+droplist = OptionMenu(root, var, *list_1)
+var.set("Select County")
+droplist.config(width = 15)
+droplist.place(x = 237, y = 362)
+
+sign_up_button = Button(root, text = "SignUp", width = 12,bg = "brown", fg = "white", command = printt).place(x = 150, y = 450)
+quit_button = Button(root, text = "Quit", width = 12, bg = "brown", fg = "white", command = exit1).place(x = 280, y = 450)
+
+root.mainloop()
