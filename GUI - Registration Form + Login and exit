@@ -1,0 +1,26 @@
+from tkinter import *
+window = Tk()
+window.geometry("500x500")
+window.title("Registration Form")
+
+def printt():
+    print("Hello please fill the form")
+
+def exit1():
+    exit()
+
+label1 = Label(window, text = "Registration Form", relief = "solid", width = 20, font = ("arial", 19, "bold"))
+label1.place(x = 90, y = 53)
+
+label2 = Label(window, text = "FirstName :", width = 20, font = ("arial", 10, "bold"))
+label2.place(x = 90, y = 130)
+
+label3 = Label(window, text = "LastName :", width = 20, font = ("arial", 10, "bold"))
+label3.place(x = 90, y = 155)
+
+button1 = Button(window, text = "Login", bg = "brown", fg = "white", command = printt)
+button2 = Button(window, text = "Logout", bg = "white", fg = "red", command = exit1)
+button1.place(x = 90, y = 250)
+button2.place(x = 90, y = 275)
+
+window.mainloop()
